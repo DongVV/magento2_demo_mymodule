@@ -1,0 +1,21 @@
+{
+    "name": "kd/mymodule",
+    "description": "kd test creation module",
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "magento/framework": "*",
+        "magento/data-migration-tool": "*"
+    },
+    "type": "magento2-module",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Kd\\MyModule\\": ""
+        }
+    },
+    "version": "1.0.1"
+}

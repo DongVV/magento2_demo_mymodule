@@ -1,0 +1,14 @@
+<form action="<?php echo $block->getUrl('mymodule/index/save'); ?>" method="post">
+    <?php
+        $post = $block->getEditRecord();
+    ?>
+    <input type="hidden" name="editRecordId" value="<?php echo $post ? $post->getData('id') : null; ?>"><br><br>
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="<?php echo $post ? $post->getData('name') : null; ?>"><br><br>
+    <label for="url_key">Url:</label>
+    <input type="text" name="url_key" value="<?php echo $post ? $post->getData('url_key') : null; ?>"><br><br>
+    <label for="post_content">Post Content:</label>
+    <textarea rows="4" cols="50" name="post_content"><?php echo $post ? $post->getData('post_content') : null; ?></textarea><br><br>
+
+    <input type="submit" value="Submit">
+</form>
